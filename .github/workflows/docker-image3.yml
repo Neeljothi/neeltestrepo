@@ -6,6 +6,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+    stage:
+      description: 'test-flow'
+      required: true
+      default: 'plan'
+      type: choice
+      options:
+      - plan
+      - apply
 jobs:
 
   build:
