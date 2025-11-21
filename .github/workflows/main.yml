@@ -1,0 +1,18 @@
+name: Pagerduty Workflow
+on:
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches:
+      - main
+workflow_dispatch:
+  inputs:
+    stage:
+      description: 'Terraform Stages'
+      required: true
+      default: 'plan'
+      type: choice
+      options:
+        - plan
+        - apply
+        
