@@ -15,4 +15,13 @@ workflow_dispatch:
       options:
         - plan
         - apply
+
+ jobs:
+  Run-Terraform-Plan
+   stage: plan
+   environment: plan
+
+
+
+   
         
